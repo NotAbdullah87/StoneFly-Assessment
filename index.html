@@ -1,335 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Side Navbar</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Custom styles for smooth transitions */
-    .rotate-90 {
-      transform: rotate(90deg);
-    }
-    .transition-transform {
-      transition: transform 0.2s ease-in-out;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Side Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --cgray: #606060
+        }
 
-       /* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
-       .sidebar::-webkit-scrollbar {
-      width: 0; /* Remove scrollbar width */
-      background: transparent; /* Make scrollbar background transparent */
-    }
+        /* Custom styles for smooth transitions */
+        .rotate-90 {
+            transform: rotate(90deg);
+        }
 
-    /* Hide scrollbar for Firefox */
-    .sidebar {
-      scrollbar-width: none; /* Firefox */
-    }
+        .transition-transform {
+            transition: transform 0.2s ease-in-out;
+        }
 
-  </style>
+        /* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+        .sidebar::-webkit-scrollbar {
+            width: 0;
+            /* Remove scrollbar width */
+            background: transparent;
+            /* Make scrollbar background transparent */
+        }
+
+        /* Hide scrollbar for Firefox */
+        .sidebar {
+            scrollbar-width: none;
+            /* Firefox */
+        }
+    </style>
 </head>
+
 <body class="bg-gray-100 overflow-show">
-  <div class="flex">
-    <!-- Sidebar -->
-    <div class="w-64 bg-[#606060] shadow-lg h-screen fixed overflow-y-auto sidebar">
-      <!-- Logo and Heading -->
-      <div class="p-6 text-center">
-        <!-- <div class="text-2xl font-bold text-gray-800">LOGO</div> -->
-        <div class="bg-white p-2 rounded-[100px] w-16 h-16 mx-auto">
-        <img class="   text-center justify-center align-center mx-auto mt-1"  src="https://s3-alpha-sig.figma.com/img/b49f/f5eb/b2542974b0118b8911a3391f0d16cb31?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TW14~C697sin6GOQt-nquVdzyBK5~xRPQRnB35tq4X20SSPAG67n5TtrmU8ZG40yF0ZMyKVgFYWjmeMLpr0au7W5CGI4sH5gyGutjrtHiXFssZVFrB5s0BBmhbBco8g9RnsfPl4yPtZUW7-ssr3qr3WNIWMxVmSrBjPejso2S9~uUAjfXX3nHwBV8MpfQ3~9lxNsOWfIkh4u-dpOGRpOanEWY2Sr3bNL8kwTcaIwRkxuhs9kZfd22vYnBtQVs0JkNAG-FCpnYn1GdpDHlw8Abx1QPpe0h7~QPH8erfOGNoW-8IPWE7YULcjGBDXhPrRegjvOeXjkqK5GA2ANprZUvQ__"/>
-    </div>
-        <div class="text-md text-white font-bold mt-2">SC-172-125-82-211</div>
-        <div class="text-sm text-white opacity-40">Administrator</div>
-      </div>
+    <div class="flex flex-col">
+        <!-- Sidebar -->
+        <div class="w-64 bg-[#606060] shadow-lg h-screen fixed overflow-y-auto sidebar">
+            <!-- Logo and Heading -->
+            <div class="p-6 text-center">
+                <!-- <div class="text-2xl font-bold text-gray-800">LOGO</div> -->
+                <div class="bg-white p-2 rounded-[100px] w-16 h-16 mx-auto">
+                    <img class="   text-center justify-center align-center mx-auto mt-1"
+                        src="https://s3-alpha-sig.figma.com/img/b49f/f5eb/b2542974b0118b8911a3391f0d16cb31?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TW14~C697sin6GOQt-nquVdzyBK5~xRPQRnB35tq4X20SSPAG67n5TtrmU8ZG40yF0ZMyKVgFYWjmeMLpr0au7W5CGI4sH5gyGutjrtHiXFssZVFrB5s0BBmhbBco8g9RnsfPl4yPtZUW7-ssr3qr3WNIWMxVmSrBjPejso2S9~uUAjfXX3nHwBV8MpfQ3~9lxNsOWfIkh4u-dpOGRpOanEWY2Sr3bNL8kwTcaIwRkxuhs9kZfd22vYnBtQVs0JkNAG-FCpnYn1GdpDHlw8Abx1QPpe0h7~QPH8erfOGNoW-8IPWE7YULcjGBDXhPrRegjvOeXjkqK5GA2ANprZUvQ__" />
+                </div>
+                <div class="text-md text-white font-bold mt-2">SC-172-125-82-211</div>
+                <div class="text-sm text-white opacity-40">Administrator</div>
+            </div>
 
-      <!-- Menu -->
-      <nav class="mt-4">
-        <ul>
-          <!-- Menu Item 1 -->
-          <li>
-            <a href="#" class="flex items-center p-3 pl-5 text-white font-medium bg-blue-500 ml-2 mr-0 rounded-tl-[12px] rounded-bl-[12px] hover:bg-blue-600">
-              <span>Dashboard</span>
-            </a>
-          </li>
+            <!-- Menu -->
+            <nav class="mt-4">
+                <ul>
+                    <!-- Menu Item 1 -->
+                    <li>
+                        <a href="#"
+                            class="flex items-center p-3 pl-5 text-white font-medium bg-blue-500 ml-2 mr-0 rounded-tl-[12px] rounded-bl-[12px] hover:bg-blue-600">
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
 
-          <!-- Menu Item 2 with Dropdown -->
-          <li>
-            <div class="dropdown">
-              <button class="w-full flex justify-between items-center p-3 text-white font-medium pl-5 hover:bg-blue-600">
-                <span>SAN</span>
-                <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </button>
-              <ul class="dropdown-menu pl-6 hidden">
-               
+                    <!-- Menu Item 2 with Dropdown -->
+                    <li>
                         <div class="dropdown">
-                            <button class="w-full flex justify-between items-center p-3 text-white  pl-5 hover:bg-blue-600">
-                                <span>Volume</span>
-                                <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            <button
+                                class="w-full flex justify-between items-center p-3 text-white font-medium pl-5 hover:bg-blue-600">
+                                <span>SAN</span>
+                                <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
                                 </svg>
-                              </button>
-                              <ul class="dropdown-menu pl-6 hidden">
-                                <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Create New Volume</a></li>
-                                <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Auto Create</a></li>
-                                <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Manual Create</a></li>
-                                </ul>   
-                        </div>
-                <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Host</a></li>
-                <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Sessions</a></li>
-              </ul>
-            </div>
-          </li>
+                            </button>
+                            <ul class="dropdown-menu pl-6 hidden">
 
-      
-              <!-- Menu Item 2 with Dropdown -->
-              <li>
-                <div class="dropdown">
-                  <button class="w-full flex justify-between items-center p-3 text-white font-medium pl-5 hover:bg-blue-600">
-                    <span>Target Portal</span>
-                    <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                  </button>
-                  <ul class="dropdown-menu pl-6 hidden">
-                   
-                            <div class="dropdown">
-                                <button class="w-full flex justify-between items-center p-3 text-white  pl-5 hover:bg-blue-600">
-                                    <span>Volume</span>
-                                    <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                  </button>
-                                  <ul class="dropdown-menu pl-6 hidden">
-                                    <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Create New Volume</a></li>
-                                    <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Auto Create</a></li>
-                                    <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Manual Create</a></li>
-                                    </ul>   
-                            </div>
-                    <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Host</a></li>
-                    <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Sessions</a></li>
-                  </ul>
-                </div>
-              </li>
-                <hr class="opacity-20">
-                     <!-- Menu Item 2 with Dropdown -->
-                     <li>
+                                <div class="dropdown">
+                                    <button
+                                        class="w-full flex justify-between items-center p-3 text-white  pl-5 hover:bg-blue-600">
+                                        <span>Volume</span>
+                                        <svg class="w-4 h-4 transition-transform transform" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu pl-6 hidden">
+                                        <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Create
+                                                New Volume</a></li>
+                                        <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Auto
+                                                Create</a></li>
+                                        <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Manual
+                                                Create</a></li>
+                                    </ul>
+                                </div>
+                                <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Host</a></li>
+                                <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Sessions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <!-- Menu Item 2 with Dropdown -->
+                    <li>
                         <div class="dropdown">
-                          <button class="w-full flex justify-between items-center p-3 text-white font-medium pl-5 hover:bg-blue-600">
-                            <span>NAS</span>
-                            <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                          </button>
-                          <ul class="dropdown-menu pl-6 hidden">
-                           
-                                    <div class="dropdown">
-                                        <button class="w-full flex justify-between items-center p-3 text-white  pl-5 hover:bg-blue-600">
-                                            <span>Volume</span>
-                                            <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                            </svg>
-                                          </button>
-                                          <ul class="dropdown-menu pl-6 hidden">
-                                            <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Create New Volume</a></li>
-                                            <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Auto Create</a></li>
-                                            <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Manual Create</a></li>
-                                            </ul>   
-                                    </div>
-                            <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Host</a></li>
-                            <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Sessions</a></li>
-                          </ul>
+                            <button
+                                class="w-full flex justify-between items-center p-3 text-white font-medium pl-5 hover:bg-blue-600">
+                                <span>Target Portal</span>
+                                <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu pl-6 hidden">
+
+                                <div class="dropdown">
+                                    <button
+                                        class="w-full flex justify-between items-center p-3 text-white  pl-5 hover:bg-blue-600">
+                                        <span>Volume</span>
+                                        <svg class="w-4 h-4 transition-transform transform" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu pl-6 hidden">
+                                        <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Create
+                                                New Volume</a></li>
+                                        <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Auto
+                                                Create</a></li>
+                                        <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Manual
+                                                Create</a></li>
+                                    </ul>
+                                </div>
+                                <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Host</a></li>
+                                <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Sessions</a></li>
+                            </ul>
                         </div>
-                      </li>
-      
-                      <hr class="opacity-20">
-                             <!-- Menu Item 2 with Dropdown -->
-              <li>
-                <div class="dropdown">
-                  <button class="w-full flex justify-between items-center p-3 text-white font-medium pl-5 hover:bg-blue-600">
-                    <span>Resources</span>
-                    <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                  </button>
-                  <ul class="dropdown-menu pl-6 hidden">
-                   
-                            <div class="dropdown">
-                                <button class="w-full flex justify-between items-center p-3 text-white  pl-5 hover:bg-blue-600">
-                                    <span>Volume</span>
-                                    <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                  </button>
-                                  <ul class="dropdown-menu pl-6 hidden">
-                                    <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Create New Volume</a></li>
-                                    <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Auto Create</a></li>
-                                    <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Manual Create</a></li>
-                                    </ul>   
-                            </div>
-                    <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Host</a></li>
-                    <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Sessions</a></li>
-                  </ul>
-                </div>
-              </li>
-
-
-              <hr class="opacity-20">
-                     <!-- Menu Item 2 with Dropdown -->
-                     <li>
+                    </li>
+                    <hr class="opacity-20">
+                    <!-- Menu Item 2 with Dropdown -->
+                    <li>
                         <div class="dropdown">
-                          <button class="w-full flex justify-between items-center p-3 text-white font-medium pl-5 hover:bg-blue-600">
-                            <span>System</span>
-                            <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                          </button>
-                          <ul class="dropdown-menu pl-6 hidden">
-                           
-                                    <div class="dropdown">
-                                        <button class="w-full flex justify-between items-center p-3 text-white  pl-5 hover:bg-blue-600">
-                                            <span>Volume</span>
-                                            <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                            </svg>
-                                          </button>
-                                          <ul class="dropdown-menu pl-6 hidden">
-                                            <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Create New Volume</a></li>
-                                            <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Auto Create</a></li>
-                                            <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Manual Create</a></li>
-                                            </ul>   
-                                    </div>
-                            <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Host</a></li>
-                            <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Sessions</a></li>
-                          </ul>
+                            <button
+                                class="w-full flex justify-between items-center p-3 text-white font-medium pl-5 hover:bg-blue-600">
+                                <span>NAS</span>
+                                <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu pl-6 hidden">
+
+                                <div class="dropdown">
+                                    <button
+                                        class="w-full flex justify-between items-center p-3 text-white  pl-5 hover:bg-blue-600">
+                                        <span>Volume</span>
+                                        <svg class="w-4 h-4 transition-transform transform" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu pl-6 hidden">
+                                        <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Create
+                                                New Volume</a></li>
+                                        <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Auto
+                                                Create</a></li>
+                                        <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Manual
+                                                Create</a></li>
+                                    </ul>
+                                </div>
+                                <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Host</a></li>
+                                <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Sessions</a></li>
+                            </ul>
                         </div>
-                      </li>
+                    </li>
 
-                      <hr class="opacity-20">
-                             <!-- Menu Item 2 with Dropdown -->
-              <li>
-                <div class="dropdown">
-                  <button class="w-full flex justify-between items-center p-3 text-white font-medium pl-5 hover:bg-blue-600">
-                    <span>Reports</span>
-                    <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                  </button>
-                  <ul class="dropdown-menu pl-6 hidden">
-                   
-                           
-                    <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Log</a></li>
-                    <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Configuration Report</a></li>
-                    <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Historical Statistics</a></li>
-                    <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Debug Logs</a></li>
-                    <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Live Statistics</a></li>
-                  </ul>
+                    <hr class="opacity-20">
+                    <!-- Menu Item 2 with Dropdown -->
+                    <li>
+                        <div class="dropdown">
+                            <button
+                                class="w-full flex justify-between items-center p-3 text-white font-medium pl-5 hover:bg-blue-600">
+                                <span>Resources</span>
+                                <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu pl-6 hidden">
+
+                                <div class="dropdown">
+                                    <button
+                                        class="w-full flex justify-between items-center p-3 text-white  pl-5 hover:bg-blue-600">
+                                        <span>Volume</span>
+                                        <svg class="w-4 h-4 transition-transform transform" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu pl-6 hidden">
+                                        <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Create
+                                                New Volume</a></li>
+                                        <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Auto
+                                                Create</a></li>
+                                        <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Manual
+                                                Create</a></li>
+                                    </ul>
+                                </div>
+                                <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Host</a></li>
+                                <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Sessions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <hr class="opacity-20">
+                    <!-- Menu Item 2 with Dropdown -->
+                    <li>
+                        <div class="dropdown">
+                            <button
+                                class="w-full flex justify-between items-center p-3 text-white font-medium pl-5 hover:bg-blue-600">
+                                <span>System</span>
+                                <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu pl-6 hidden">
+
+                                <div class="dropdown">
+                                    <button
+                                        class="w-full flex justify-between items-center p-3 text-white  pl-5 hover:bg-blue-600">
+                                        <span>Volume</span>
+                                        <svg class="w-4 h-4 transition-transform transform" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu pl-6 hidden">
+                                        <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Create
+                                                New Volume</a></li>
+                                        <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Auto
+                                                Create</a></li>
+                                        <li><a href="#" class="block p-2 text-white opacity-90 hover:bg-blue-500">Manual
+                                                Create</a></li>
+                                    </ul>
+                                </div>
+                                <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Host</a></li>
+                                <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Sessions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <hr class="opacity-20">
+                    <!-- Menu Item 2 with Dropdown -->
+                    <li>
+                        <div class="dropdown">
+                            <button
+                                class="w-full flex justify-between items-center p-3 text-white font-medium pl-5 hover:bg-blue-600">
+                                <span>Reports</span>
+                                <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu pl-6 hidden">
+
+
+                                <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Log</a></li>
+                                <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Configuration Report</a>
+                                </li>
+                                <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Historical Statistics</a>
+                                </li>
+                                <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Debug Logs</a></li>
+                                <li><a href="#" class="block p-2 text-white hover:bg-blue-500">Live Statistics</a></li>
+                            </ul>
+                        </div>
+                    </li>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 ml-64 p-8">
+
+            <!-- Top Bar -->
+            <div class="flex w-full justify-between">
+                <!-- Left Side -->
+                <div class="flex">
+                    <!-- User Circle -->
+                    <div class="bg-gray-200 w-20 h-20 rounded-[50px]"></div>
+                    <div class="ml-2 mt-2">
+                        <h1>Welcome</h1>
+                        <h2 class="text-sm">SC-172-125-82-211</h2>
+                        <div>Status <span class="bg-gray-600 pl-3 pr-3 rounded-[50px] text-white font-bold">Good</span>
+                        </div>
+                    </div>
                 </div>
-              </li>
-        </nav>
-    </div>
 
-    <!-- Main Content -->
-    <div class="flex-1 ml-64 p-8">
-     
-        <!-- Top Bar -->
-        <div class="flex w-full justify-between">
-            <!-- Left Side -->
-            <div class="flex">
-              <!-- User Circle -->
-              <div class="bg-gray-200 w-20 h-20 rounded-[50px]"></div>
-              <div class="ml-2 mt-2">
-                <h1>Welcome</h1>
-                <h2 class="text-sm">SC-172-125-82-211</h2>
-                <div>Status <span class="bg-gray-600 pl-3 pr-3 rounded-[50px] text-white font-bold">Good</span></div>
-              </div>
-            </div>
-          
-            <!-- Right Side -->
-            <div class="flex items-center">
-              <button class="bg-gray-600 mr-2 h-fit rounded-[50px] pl-3 pr-3 text-center text-white font-bold">Support</button>
-              <button>
-                <img width="40" src="assets/log-button.png" />
-              </button>
-            </div>
-          </div>
-
-        <div class="mt-5">
-        <h1 class="text-xl text-[#606060] font-medium">Dashboard</h1>
-        <hr size="30" class="h-[4px] opacity-20 border bg-[#606060]">
-
-
-
-    </div>
-
-        <div class="flex  bg-[#606060] p-4 mt-2 rounded-xl">
-            <div class="flex mt-2 ">
-                <h1 class="text-white font-bold mr-2">Information </h1>
-                <img class="" src="assets/right-arrow.svg" width="10"/>
-            </div>
-
-            <!-- ISCSI SAN IP -->
-            <div class="flex ml-12">
-                <img src="assets/san-ip.png" class="w-12"/>
-                <div class="flex flex-col ml-2">
-                    <h1 class="text-white font-bold mr-2">ISCSI SAN IP:</h1>
-                    <p class="text-sm text-white opacity-50">192.168.10.255</p>
+                <!-- Right Side -->
+                <div class="flex items-center">
+                    <button
+                        class="bg-gray-600 mr-2 h-fit rounded-[50px] pl-3 pr-3 text-center text-white font-bold">Support</button>
+                    <button>
+                        <img width="40" src="assets/log-button.png" />
+                    </button>
                 </div>
             </div>
 
-                 <!-- NAS LAN IP -->
-                 <div class="flex ml-10">
-                    <img src="assets/lan-ip.png"  width="50" height="20" />
+            <div class="mt-5">
+                <h1 class="text-xl text-[#606060] font-medium">Dashboard</h1>
+                <hr size="30" class="h-[4px] opacity-20 border bg-[#606060]">
+
+
+
+            </div>
+
+            <div class="flex  bg-[#606060] justify-between pr-12 pl-12 p-4 mt-2 rounded-xl">
+                <div class="flex mt-2 ">
+                    <h1 class="text-white font-bold mr-2">Information </h1>
+                    <img class="" src="assets/right-arrow.svg" width="10" />
+                </div>
+
+                <!-- ISCSI SAN IP -->
+                <div class="flex ml-12">
+                    <img src="assets/san-ip.png" class="w-12" />
+                    <div class="flex flex-col ml-2">
+                        <h1 class="text-white font-bold mr-2">ISCSI SAN IP:</h1>
+                        <p class="text-sm text-white opacity-50">192.168.10.255</p>
+                    </div>
+                </div>
+
+                <!-- NAS LAN IP -->
+                <div class="flex ml-10">
+                    <img src="assets/lan-ip.png" width="50" height="20" />
                     <div class="flex flex-col ml-2">
                         <h1 class="text-white font-bold mr-2">NAS LAN IP:</h1>
                         <p class="text-sm text-white opacity-50">192.168.10.255</p>
                     </div>
                 </div>
 
-                      <!-- ISCSI LAN IP -->
-                      <div class="flex ml-10">
-                        <img src="assets/iscsi-lan-ip.png"  width="50" height="30" />
-                        <div class="flex flex-col ml-2">
-                            <h1 class="text-white font-bold mr-2">ISCSI LAN IP:</h1>
-                            <p class="text-sm text-white opacity-50">192.168.10.255</p>
-                        </div>
+                <!-- ISCSI LAN IP -->
+                <div class="flex ml-10">
+                    <img src="assets/iscsi-lan-ip.png" width="50" height="30" />
+                    <div class="flex flex-col ml-2">
+                        <h1 class="text-white font-bold mr-2">ISCSI LAN IP:</h1>
+                        <p class="text-sm text-white opacity-50">192.168.10.255</p>
                     </div>
-        </div>
-
-        
-        <div class=" flex  justify-between  text-center items-center bg-white">
-            <div class="text-center justify-center align-center items-center mx-auto">
-                <img src="assets/GUI-1.png" />
+                </div>
             </div>
 
+            <div class="flex shadow-lg justify-between pt-10 pb-12 text-center items-center bg-white relative">
+                <!-- Left Section: CPU & Memory -->
+                <div class="text-center justify-center align-center items-center mx-auto">
+                    <h1 class="font-medium text-[var(--cgray)] mb-3">CPU & Memory</h1>
+                    <img src="assets/GUI-1.png" />
+                </div>
+
+                <!-- Divider -->
+                <div class="bg-[var(--cgray)] w-[2px] opacity-20 h-52"></div>
+
+                <!-- Right Section: Network Utilization -->
+                <div class="text-center justify-center align-center items-center mx-auto">
+                    <h1 class="font-medium text-[var(--cgray)] mb-6">Network Utilization</h1>
+                    <img style="z-index: 20;" src="assets/GUI-2.png" />
+                </div>
+
+
+            </div>
+
+            <!-- Blocks -->
+            <div class="flex justify-between mt-4">
+                <div class="flex pb-2 w-1/2 pt-6 rounded-xl shadow-xl pl-6 pr-6  bg-[var(--cgray)]">
+                    <div>
+                        <h1 class="text-white font-medium mb-2 ">Concentrator Type</h1>
+                        <p class="text-white font-light text-xs">Name: SC-192-168-10-250 <br>
+                            MGMT: 192.168.10.250 <br>
+                            ISCSI IP: 192.168.10.250</p>
+                    </div>
+                    <img class="mt-12" src="assets/Concentrator.png" />
+                </div>
+
+                <div class="flex ml-2 pb-2 w-1/2 pt-6 rounded-xl shadow-xl pl-6 pr-6  bg-[var(--cgray)]">
+                    <div>
+                        <h1 class="text-white font-medium mb-2 ">Quick Links</h1>
+                        <p class="text-white font-light text-xs">Name: SC-192-168-10-250 <br>
+                            MGMT: 192.168.10.250 <br>
+                            ISCSI IP: 192.168.10.250</p>
+                    </div>
+                    <img class="mt-12 ml-12 -translate-y-4" src="assets/customer-support.png" />
+                </div>
+
+
+                <div class="flex ml-2 w-1/2 pb-2 pt-6 rounded-xl shadow-xl pl-6 pr-6  bg-[var(--cgray)]">
+                    <div>
+                        <h1 class="text-white font-medium mb-2 ">Disocver SC's</h1>
+                        <p class="text-white font-light text-xs">Name: SC-192-168-10-250 <br>
+                            MGMT: 192.168.10.250 <br>
+                          </p>
+                            <button class="bg-white pl-5 pr-5 rounded-xl text-center mt-2">open</button>
+                    </div>
+                    <img class="mt-12 w-28 h-12 translate-x-5"  src="assets/discover-Sc.png" />
+                </div>
+
+            </div>
         </div>
+
+
     </div>
-  
-    
-
-</div>
 
 
-  <script>
-    // JavaScript for dropdown functionality
-    document.querySelectorAll('.dropdown').forEach((dropdown) => {
-      const button = dropdown.querySelector('button');
-      const menu = dropdown.querySelector('.dropdown-menu');
-      const icon = dropdown.querySelector('svg');
 
-      button.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        icon.classList.toggle('rotate-90');
-      });
-    });
 
-    // Highlight active menu item
-    const currentPage = window.location.pathname.split('/').pop() || 'dashboard';
-    document.querySelectorAll('nav a').forEach((link) => {
-      if (link.getAttribute('href') === currentPage) {
-        link.classList.add('bg-gray-200');
-      }
-    });
-  </script>
+
+    <script>
+        // JavaScript for dropdown functionality
+        document.querySelectorAll('.dropdown').forEach((dropdown) => {
+            const button = dropdown.querySelector('button');
+            const menu = dropdown.querySelector('.dropdown-menu');
+            const icon = dropdown.querySelector('svg');
+
+            button.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                icon.classList.toggle('rotate-90');
+            });
+        });
+
+        // Highlight active menu item
+        const currentPage = window.location.pathname.split('/').pop() || 'dashboard';
+        document.querySelectorAll('nav a').forEach((link) => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('bg-gray-200');
+            }
+        });
+    </script>
 </body>
-</html> 
+
+</html>
