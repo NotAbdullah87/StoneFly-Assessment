@@ -291,7 +291,7 @@
         </div>
 
         <!-- Main Content -->
-        <div class="flex-1 ml-64 p-8">
+        <div class="flex-1 ml-72 p-12">
 
             <!-- Top Bar -->
             <div class="flex w-full justify-between">
@@ -413,9 +413,84 @@
                 </div>
 
             </div>
+
+
+            <div class=" mt-8 mx-auto">
+                <h1 class="text-xl font-bold text-[var(--cgray)] mb-4">Resources</h1>
+                <!-- Legend -->
+                <div class="flex items-center text-right itmes-right space-x-4 mb-4">
+                  <div class="flex items-center">
+                    <div class="w-4 h-4 bg-blue-700  rounded-sm"></div>
+                    <span class="ml-2 text-sm">Used</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="w-4 h-4 bg-cyan-400 rounded-sm"></div>
+                    <span class="ml-2 text-sm">Available</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="w-4 h-4 bg-gray-300 rounded-sm"></div>
+                    <span class="ml-2 text-sm">Not Managed</span>
+                  </div>
+                </div>
+                <!-- Table -->
+                <div class="overflow-x-auto">
+                  <table class="w-full border-collapse border border-gray-200">
+                    <thead>
+                      <tr class="bg-gray-200 text-left">
+                        <th class="p-3 border border-gray-200">Image</th>
+                        <th class="p-3 border border-gray-200">Name</th>
+                        <th class="p-3 border border-gray-200">Path</th>
+                        <th class="p-3 border border-gray-200">Total Space (GiB)</th>
+                        <th class="p-3 border border-gray-200">Used (GiB)</th>
+                        <th class="p-3 border border-gray-200">Free (GiB)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Row 1 -->
+                      <tr>
+                        <td class="p-3 border border-gray-200">Lorem Ipsum</td>
+                        <td class="p-3 border border-gray-200">Lorem Ipsum</td>
+                        <td class="p-3 border border-gray-200">Lorem Ipsum</td>
+                        <td class="p-3 border border-gray-200">Lorem Ipsum</td>
+                        <td class="p-3 border border-gray-200">Lorem Ipsum</td>
+                        <td class="p-3 border border-gray-200">Lorem Ipsum</td>
+                      </tr>
+                      <tr>
+                        <td colspan="6" class="p-3">
+                          <div class="relative h-4 bg-gray-300 rounded-sm">
+                            <div class="absolute top-0 left-0 h-full bg-blue-700 rounded-xl" style="width: 91%"></div>
+                            <div class="absolute top-0 h-full bg-cyan-400  left-[91%]" style="width: 9%"></div>
+                          </div>
+                          <span class="block text-sm text-center mt-1">91%</span>
+                        </td>
+                      </tr>
+                      <!-- Row 2 -->
+                      <tr>
+                        <td class="p-3 border border-gray-200">Lorem Ipsum</td>
+                        <td class="p-3 border border-gray-200">Lorem Ipsum</td>
+                        <td class="p-3 border border-gray-200">Lorem Ipsum</td>
+                        <td class="p-3 border border-gray-200">Lorem Ipsum</td>
+                        <td class="p-3 border border-gray-200">Lorem Ipsum</td>
+                        <td class="p-3 border border-gray-200">Lorem Ipsum</td>
+                      </tr>
+                      <tr>
+                        <td colspan="6" class="p-3">
+                          <div class="relative h-4 bg-gray-300 rounded-sm">
+                            <div class="absolute top-0 left-0 h-full bg-blue-700 rounded-xl" style="width: 56%"></div>
+                            <div class="absolute top-0 h-full bg-cyan-400 left-[56%]" style="width: 44%"></div>
+                          </div>
+                          <span class="block text-sm text-center mt-1">56%</span>
+                        </td>
+                      </tr>
+                      <!-- Repeat similar rows -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
         </div>
 
-
+      
     </div>
 
 
